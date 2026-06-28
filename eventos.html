@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Portafolio | Stream y Video Mapping</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f7fa;
+            color: #303030;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e9eef3;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #183457;
+            border-radius: 10px;
+        }
+
+        :root {
+            --primary: #183457;
+            --primary-dark: #0f2a3f;
+            --accent: #5B9BD5;
+            --accent-dark: #4A8BC2;
+            --text-dark: #303030;
+            --gray-light: #f1f5f9;
+            --gray-mid: #cbd5e1;
+            --card-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.02);
+            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 18px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            transition: var(--transition);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .logo {
+            font-weight: 800;
+            font-size: 1.6rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        .menu-btn {
+            display: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        section {
+            padding: 100px 0 80px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            letter-spacing: -0.02em;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--primary));
+            border-radius: 4px;
+        }
+        .title-center {
+            text-align: center;
+            display: block;
+        }
+        .title-center:after {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+        }
+
+        /* Bloques de video */
+        .video-block {
+            background: white;
+            border-radius: 28px;
+            padding: 1.8rem 2.2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+        .video-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 40px -20px rgba(0, 0, 0, 0.15);
+        }
+        .video-block h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .video-block p {
+            color: #4a4a4a;
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-bottom: 1rem;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #000;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 12px 28px;
+            border-radius: 40px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 6px 14px rgba(24, 52, 87, 0.25);
+        }
+        .btn-back:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px rgba(24, 52, 87, 0.3);
+        }
+
+        /* Contacto */
+        .contact-card {
+            background: white;
+            border-radius: 60px;
+            padding: 1rem 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+        .contact-card i {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            background: var(--primary);
+            color: white;
+        }
+        .contact-card:hover i {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 850px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                background: rgba(255,255,255,0.98);
+                backdrop-filter: blur(20px);
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem;
+                gap: 1.8rem;
+                transition: 0.3s ease;
+                box-shadow: 0 20px 30px rgba(0,0,0,0.05);
+                border-radius: 0 0 30px 30px;
+            }
+            .nav-links.active {
+                left: 0;
+            }
+            .menu-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .video-block h3 {
+                font-size: 1.4rem;
+            }
+            .video-block {
+                padding: 1rem;
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">PORTAFOLIO</div>
+        <div class="menu-btn" id="menuBtn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <section id="inicio" style="padding-top: 140px;">
+        <div class="container">
+            <h1 class="section-title title-center">Eventos&nbsp;</h1>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto; color: #4a4a4a; font-size: 1.1rem;">
+              Producción audiovisual para eventos corporativos en lo que se participo de manera global para lograr grandes resultados.
+          </p>
+
+            <!-- Bloque 1 -->
+            
+			<div class="video-block reveal">
+                <h3>Streaming en vivo</h3>
+                <p>Producción y transmisión de evento via stream para Uber, konecta y auronix</p>
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="/cv/stream/techit.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Bloque 2 -->
+            <div class="video-block reveal">
+                <h3>Video Mapping</h3>
+                <p>Proyección de contenido visual sobre superficies tridimensionales (edificios, escenarios, objetos). Creación de mapping con Resolume Arena y software especializado.</p>
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Bloque 3 -->
+            <div class="video-block reveal">
+                <h3>Motion Graphics para pantallas LED</h3>
+                <p>Diseño y animación de gráficos en movimiento para pantallas gigantes, fondos de escenario, contenido para conciertos y eventos corporativos.</p>
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Bloque 4 -->
+            <div class="video-block reveal">
+                <h3>Contenido interactivo</h3>
+                <p>Desarrollo de experiencias visuales interactivas con sensores, cámaras y control en tiempo real. Ideal para museos, ferias y activaciones de marca.</p>
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Volver al CV principal</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" style="padding-top: 60px;">
+        <div class="container">
+            <h2 class="section-title title-center">¿Interesado en colaborar?</h2>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="https://wa.me/5215516003694" target="_blank" class="contact-card">
+                    <i class="fab fa-whatsapp"></i> 5516003694
+                </a>
+                <a href="mailto:yeistudio11@gmail.com" class="contact-card">
+                    <i class="fas fa-envelope"></i> yeistudio11@gmail.com
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Erick Castañeda Merchan — Portafolio de Stream y Video Mapping</p>
+</footer>
+
+<script>
+    // Menú hamburguesa
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Scroll suave para enlaces internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            if (href === "#" || href === "") return;
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // Reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
+    revealElements.forEach(el => observer.observe(el));
+
+    window.addEventListener('load', () => {
+        revealElements.forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight - 50) {
+                el.classList.add('visible');
+            }
+        });
+    });
+</script>
+</body>
+</html>
