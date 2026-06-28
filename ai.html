@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Portafolio | Desarrollo IA</title>
+    <title>Portafolio | Modelado y Renderizado 3D</title>
     <!-- Google Fonts & Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -104,6 +104,7 @@
             color: var(--text-dark);
         }
 
+        /* Secciones */
         section {
             padding: 100px 0 80px;
         }
@@ -136,8 +137,8 @@
             transform: translateX(-50%);
             width: 100px;
         }
-
-        /* Bloques */
+       
+		/* Bloques */
         .ia-block {
             display: flex;
             align-items: center;
@@ -209,6 +210,76 @@
         .ia-block:hover .ia-imagen img {
             transform: scale(1.03);
         }
+      
+		/* Proyectos */
+        .proyecto {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            background: white;
+            border-radius: 28px;
+            padding: 1.8rem 2.2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+        .proyecto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 40px -20px rgba(0, 0, 0, 0.15);
+        }
+
+        .proyecto-info {
+            flex: 1;
+        }
+        .proyecto-info h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .proyecto-info p {
+            color: #4a4a4a;
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-bottom: 1rem;
+        }
+
+        .btn-ver {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 40px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(24, 52, 87, 0.2);
+        }
+        .btn-ver:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(24, 52, 87, 0.3);
+        }
+
+        .proyecto-imagen {
+            flex: 0 0 280px;
+            height: 180px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+        .proyecto-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+        .proyecto:hover .proyecto-imagen img {
+            transform: scale(1.03);
+        }
 
         .btn-back {
             display: inline-block;
@@ -228,46 +299,199 @@
             box-shadow: 0 12px 20px rgba(24, 52, 87, 0.3);
         }
 
-        /* Contacto */
-        .contact-card {
-            background: white;
-            border-radius: 60px;
-            padding: 1rem 2rem;
-            display: inline-flex;
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(6px);
+            z-index: 2000;
+            justify-content: center;
             align-items: center;
-            gap: 12px;
-            box-shadow: var(--card-shadow);
+            padding: 2rem;
+            animation: fadeIn 0.3s ease;
+        }
+        .modal-overlay.open {
+            display: flex;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 1100px;
+            width: 100%;
+            max-height: 90vh;
+            background: #1a1a2e;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: #16213e;
+            color: white;
+        }
+        .modal-header h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+            padding: 0 0.5rem;
+        }
+        .modal-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 1.5rem 2rem 2rem 2rem;
+            background: #1a1a2e;
+            overflow-y: auto;
+        }
+
+        .modal-visual {
+            position: relative;
+            background: #0f0f1f;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+            max-height: 60vh;
+        }
+        .modal-visual img,
+        .modal-visual video {
+            max-width: 100%;
+            max-height: 60vh;
+            object-fit: contain;
+            border-radius: 16px;
+            display: block;
+        }
+        .modal-visual video {
+            background: #000;
+            width: 100%;
+        }
+
+        .modal-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            gap: 1rem;
+        }
+        .modal-nav button {
+            background: rgba(255, 255, 255, 0.08);
+            border: none;
+            color: white;
+            font-size: 1.6rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
             transition: var(--transition);
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .contact-card i {
-            font-size: 1.5rem;
-            color: var(--primary);
+        .modal-nav button:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
-        .contact-card:hover {
-            transform: translateY(-5px);
-            background: var(--primary);
+
+        .modal-thumbnails {
+            display: flex;
+            gap: 0.8rem;
+            flex: 1;
+            overflow-x: auto;
+            padding: 0.5rem 0;
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+        .modal-thumbnails::-webkit-scrollbar {
+            height: 4px;
+        }
+        .modal-thumbnails::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 10px;
+        }
+
+        .thumb-item {
+            flex: 0 0 80px;
+            height: 60px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border 0.2s;
+            opacity: 0.6;
+            position: relative;
+        }
+        .thumb-item.active {
+            border-color: var(--accent);
+            opacity: 1;
+        }
+        .thumb-item img,
+        .thumb-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .thumb-item video {
+            background: #000;
+        }
+        .thumb-item .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             color: white;
+            font-size: 1.2rem;
+            text-shadow: 0 0 10px rgba(0,0,0,0.8);
+            pointer-events: none;
         }
-        .contact-card:hover i {
-            color: white;
+
+        .modal-counter {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            white-space: nowrap;
+            padding: 0 1rem;
         }
 
         /* Responsive */
         @media (max-width: 850px) {
-            .ia-block {
+            .proyecto {
                 flex-direction: column-reverse;
                 text-align: center;
                 padding: 1.5rem;
             }
-            .ia-imagen {
+            .proyecto-imagen {
                 flex: 0 0 auto;
                 width: 100%;
                 height: 200px;
             }
-            .ia-info p {
+            .proyecto-info p {
                 max-width: 100%;
             }
             .section-title {
@@ -294,17 +518,41 @@
             .menu-btn {
                 display: block;
             }
+            .modal-content {
+                max-height: 95vh;
+                border-radius: 20px;
+            }
+            .modal-visual {
+                min-height: 250px;
+                max-height: 50vh;
+            }
+            .modal-visual img,
+            .modal-visual video {
+                max-height: 50vh;
+            }
+            .thumb-item {
+                flex: 0 0 60px;
+                height: 45px;
+            }
         }
 
         @media (max-width: 550px) {
             .section-title {
                 font-size: 1.8rem;
             }
-            .ia-info h3 {
+            .proyecto-info h3 {
                 font-size: 1.4rem;
             }
-            .ia-imagen {
+            .proyecto-imagen {
                 height: 160px;
+            }
+            .modal-header h3 {
+                font-size: 1rem;
+            }
+            .modal-nav button {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
             }
         }
 
@@ -325,10 +573,6 @@
             padding: 2rem;
             font-size: 0.9rem;
         }
-
-        a {
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
@@ -340,8 +584,7 @@
             <i class="fas fa-bars"></i>
         </div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="index.html">Inicio</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </div>
@@ -350,32 +593,32 @@
 <main>
     <section id="inicio" style="padding-top: 140px;">
         <div class="container">
-            <h1 class="section-title title-center">Desarrollo con IA</h1>
+            <h1 class="section-title title-center">Creacion y desarrollo con IA</h1>
             <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto; color: #4a4a4a; font-size: 1.1rem;">
-                Aplicaciones de inteligencia artificial aplicadas a la creatividad visual, desarrollo de software y automatización.
-            </p>
+              Inteligencia artificial aplicadas a la creatividad visual, desarrollo de software y automatización.
+          </p>
 
-            <!-- Bloque 1: Generación de imágenes -->
-            <div class="ia-block reveal">
-                <div class="ia-info">
+            <!-- 1. Generación de imágenes -->
+            <div class="proyecto reveal" data-index="0">
+                <div class="proyecto-info">
                     <h3>Generación de imágenes</h3>
-                    <p>Creación de imágenes y arte conceptual usando modelos de IA generativa (DALL‑E, Midjourney, Stable Diffusion). Estilos personalizados, escalado y edición.</p>
-                    <a href="galeria-imagenes.html" class="btn-ia"><i class="fas fa-images"></i> Ver galería</a>
+                    <p>Creación de imágenes y arte conceptual usando modelos de IA generativa (Chat GPT, Nano Banana, etc...). Estilos personalizados, Renderizado, escalado y edición.</p>
+                    <button class="btn-ver" onclick="abrirGaleria(0)"><i class="fas fa-images"></i> Ver</button>
                 </div>
-                <div class="ia-imagen">
-                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Generación de imágenes con IA">
+                <div class="proyecto-imagen">
+                    <img src="/cv/images/cv-iaimg.webp" alt="Modelado de productos">
                 </div>
             </div>
 
-            <!-- Bloque 2: Generación de video -->
-            <div class="ia-block reveal">
-                <div class="ia-info">
+            <!-- 2. Generación de video -->
+            <div class="proyecto reveal" data-index="1">
+                <div class="proyecto-info">
                     <h3>Generación de video</h3>
                     <p>Producción de videos con IA: animación de imágenes, creación de clips a partir de texto, edición automática y efectos avanzados.</p>
-                    <a href="galeria-videos.html" class="btn-ia"><i class="fas fa-video"></i> Ver galería</a>
+                    <button class="btn-ver" onclick="abrirGaleria(1)"><i class="fas fa-images"></i> Ver</button>
                 </div>
-                <div class="ia-imagen">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f3fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Generación de video con IA">
+                <div class="proyecto-imagen">
+                    <img src="/cv/images/cv-iavid.webp" alt="Render arquitectónico">
                 </div>
             </div>
 
@@ -387,38 +630,203 @@
                     <a href="apps.html" class="btn-ia"><i class="fas fa-code"></i> Ver página</a>
                 </div>
                 <div class="ia-imagen">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Desarrollo web y apps">
+                    <img src="/cv/images/cv-iapwa.webp" alt="Desarrollo web y apps">
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Volver al CV principal</a>
+                <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Volver</a>
             </div>
         </div>
     </section>
 
     <!-- Contacto -->
     <section id="contacto" style="padding-top: 60px;">
-        <div class="container">
-            <h2 class="section-title title-center">¿Interesado en colaborar?</h2>
-            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
-                <a href="https://wa.me/5215516003694" target="_blank" class="contact-card">
-                    <i class="fab fa-whatsapp"></i> 5516003694
-                </a>
-                <a href="mailto:yeistudio11@gmail.com" class="contact-card">
-                    <i class="fas fa-envelope"></i> yeistudio11@gmail.com
-                </a>
-            </div>
+    <div class="container">
+        <h2 class="section-title title-center">¿Interesado en colaborar?</h2>
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+            <a href="https://wa.me/5215516003694" target="_blank" class="contact-card" style="background: white; border-radius: 60px; padding: 1rem 2rem; display: inline-flex; align-items: center; gap: 12px; box-shadow: var(--card-shadow); text-decoration: none; color: var(--text-dark); font-weight: 500;">
+                <i class="fab fa-whatsapp" style="color: var(--primary);"></i> 5516003694
+            </a>
+            <a href="mailto:yeistudio11@gmail.com" class="contact-card" style="background: white; border-radius: 60px; padding: 1rem 2rem; display: inline-flex; align-items: center; gap: 12px; box-shadow: var(--card-shadow); text-decoration: none; color: var(--text-dark); font-weight: 500;">
+                <i class="fas fa-envelope" style="color: var(--primary);"></i> yeistudio11@gmail.com
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 </main>
 
 <footer>
-    <p>© 2026 Erick Castañeda Merchan — Portafolio de Desarrollo con IA</p>
+    <p>© 2026 Erick Castañeda Merchan — Portafolio de Modelado y Renderizado 3D</p>
 </footer>
 
+<!-- Modal -->
+<div class="modal-overlay" id="modalGaleria">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modalTitulo">Proyecto</h3>
+            <button class="modal-close" onclick="cerrarGaleria()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-visual" id="modalVisual">
+                <!-- Aquí se inserta imagen o video -->
+            </div>
+            <div class="modal-nav">
+                <button onclick="cambiarMedia(-1)"><i class="fas fa-chevron-left"></i></button>
+                <div class="modal-thumbnails" id="modalThumbnails">
+                    <!-- Miniaturas generadas por JS -->
+                </div>
+                <button onclick="cambiarMedia(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div style="text-align: center; margin-top: 0.5rem; color: rgba(255,255,255,0.5); font-size: 0.8rem;" id="modalCounter">1 / 5</div>
+        </div>
+    </div>
+</div>
+
 <script>
-    // Menú hamburguesa
+    // ========== DATOS DE CADA CATEGORÍA ==========
+    const proyectosMedia = [
+        // 0: Visualización de stands y exposiciones
+        [
+            { type: 'image', src: '/cv/ia/ia-img01.webp' },
+			{ type: 'image', src: '/cv/ia/ia-img02.webp' },
+			{ type: 'image', src: '/cv/ia/ia-img03.webp' },
+			{ type: 'image', src: '/cv/ia/ia-img04.webp' },
+			{ type: 'image', src: '/cv/ia/ia-img05.webp' },
+        ],
+        // 1: Espacios Comerciales
+        [
+            { type: 'image', src: 'cv/ia/.webp' },
+			{ type: 'image', src: 'cv/ia/.webp' },
+			{ type: 'image', src: 'cv/ia/.webp' },
+			{ type: 'video', src: 'cv/ia/.webp' },
+			{ type: 'image', src: 'cv/ia/.webp' },
+			{ type: 'image', src: 'cv/ia/.webp' },
+        ],
+
+        // 2: Escenografías y espacios
+        [
+            { type: 'image', src: '/cv/render/er-mellon01.webp' },
+        ],
+
+    ];
+
+    const proyectosNombres = [
+        'Modelado de productos',
+        'Renderizado arquitectónico',
+        'Visualización de stands y exposiciones',
+        'Escenografías y espacios',
+        'Animación 3D'
+    ];
+
+    // Estado
+    let proyectoActual = 0;
+    let mediaActual = 0;
+    let medios = [];
+
+    const modalOverlay = document.getElementById('modalGaleria');
+    const modalVisual = document.getElementById('modalVisual');
+    const modalThumbnails = document.getElementById('modalThumbnails');
+    const modalCounter = document.getElementById('modalCounter');
+    const modalTitulo = document.getElementById('modalTitulo');
+
+    function abrirGaleria(index) {
+        proyectoActual = index;
+        medios = proyectosMedia[index] || [];
+        mediaActual = 0;
+        modalTitulo.textContent = proyectosNombres[index] || 'Proyecto';
+        renderizarGaleria();
+        modalOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function cerrarGaleria() {
+        modalOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+        const videos = modalVisual.querySelectorAll('video');
+        videos.forEach(v => v.pause());
+    }
+
+    function cambiarMedia(delta) {
+        if (!medios.length) return;
+        mediaActual = (mediaActual + delta + medios.length) % medios.length;
+        renderizarMedia();
+        actualizarThumbnails();
+    }
+
+    function irAMedia(index) {
+        if (index < 0 || index >= medios.length) return;
+        mediaActual = index;
+        renderizarMedia();
+        actualizarThumbnails();
+    }
+
+    function renderizarGaleria() {
+        renderizarMedia();
+        renderizarThumbnails();
+        actualizarThumbnails();
+    }
+
+    function renderizarMedia() {
+        const item = medios[mediaActual];
+        if (!item) {
+            modalVisual.innerHTML = '<p style="color:white;">Sin contenido</p>';
+            return;
+        }
+        if (item.type === 'video') {
+            modalVisual.innerHTML = `
+                <video controls autoplay muted>
+                    <source src="${item.src}" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+            `;
+        } else {
+            modalVisual.innerHTML = `<img src="${item.src}" alt="Imagen del proyecto">`;
+        }
+        modalCounter.textContent = `${mediaActual + 1} / ${medios.length}`;
+    }
+
+    function renderizarThumbnails() {
+        modalThumbnails.innerHTML = '';
+        medios.forEach((item, idx) => {
+            const thumb = document.createElement('div');
+            thumb.className = 'thumb-item';
+            if (idx === mediaActual) thumb.classList.add('active');
+            if (item.type === 'video') {
+                thumb.innerHTML = `
+                    <video muted>
+                        <source src="${item.src}" type="video/mp4">
+                    </video>
+                    <i class="fas fa-play play-icon"></i>
+                `;
+            } else {
+                thumb.innerHTML = `<img src="${item.src}" alt="miniatura">`;
+            }
+            thumb.dataset.index = idx;
+            thumb.addEventListener('click', () => irAMedia(idx));
+            modalThumbnails.appendChild(thumb);
+        });
+    }
+
+    function actualizarThumbnails() {
+        const thumbs = modalThumbnails.querySelectorAll('.thumb-item');
+        thumbs.forEach((el, idx) => {
+            el.classList.toggle('active', idx === mediaActual);
+        });
+    }
+
+    // Eventos teclado
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') cerrarGaleria();
+        if (e.key === 'ArrowRight' && modalOverlay.classList.contains('open')) cambiarMedia(1);
+        if (e.key === 'ArrowLeft' && modalOverlay.classList.contains('open')) cambiarMedia(-1);
+    });
+
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) cerrarGaleria();
+    });
+
+    // Menú
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
     menuBtn.addEventListener('click', () => {
@@ -427,19 +835,6 @@
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
-        });
-    });
-
-    // Scroll suave para enlaces internos
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const href = this.getAttribute('href');
-            if (href === "#" || href === "") return;
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
         });
     });
 
@@ -453,6 +848,19 @@
         });
     }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
     revealElements.forEach(el => observer.observe(el));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === "#" || href === "") return;
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
 
     window.addEventListener('load', () => {
         revealElements.forEach(el => {
