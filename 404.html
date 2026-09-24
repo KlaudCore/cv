@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Erick Castañeda — Creative Technologist, AI, MarTech y Digital Experiences.">
+<meta property="og:title" content="Erick Castañeda — Creative Technologist">
+<meta property="og:description" content="Creatividad + IA + MarTech + automatización.">
+<title>Erick Castañeda — Creative Designer</title>
+
+<!-- Anti-FOUC: aplica tema guardado antes de renderizar -->
+<script>
+  (function(){
+    try {
+      var t = localStorage.getItem('ec-theme');
+      if (t === 'light') document.documentElement.classList.add('light-theme');
+    } catch(e){}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Lottie Player -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
+
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="navbar" id="navbar">
+    <a href="#inicio" class="brand">
+        <span class="brand-mark">EM</span>
+        <span class="brand-name">ERICK CASTAÑEDA MERCHAN</span>
+    </a>
+
+    <nav class="navigation">
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#valor">Valor</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#ia">IA</a>
+        <a href="#skills">Skills</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button"
+                aria-label="Cambiar tema" aria-pressed="false"
+                title="Cambiar tema claro/oscuro">
+            <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+            <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+        </button>
+
+        <button class="recruiter-mode" id="recruiterBtn" type="button" aria-pressed="false">
+            <span class="bolt">ϟ</span>
+            <span class="recruiter-label">Para Reclutadores</span>
+            <span class="toggle"><span></span></span>
+        </button>
+    </div>
+</header>
+
+<main>
+
+<!-- =========================
+     PRELOADER
+========================= -->
+<div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-bg"></div>
+
+    <div class="preloader-content">
+        <div class="preloader-brand">
+            <span class="preloader-mark">EM</span>
+            <span class="preloader-name">ERICK MERCHAN</span>
+        </div>
+
+        <div class="preloader-counter">
+            <span id="preloaderNumber">00</span><span class="pct">%</span>
+        </div>
+
+        <div class="preloader-bar">
+            <div class="preloader-bar-fill" id="preloaderBar"></div>
+        </div>
+
+        <div class="preloader-status">
+            <span class="dot"></span>
+            <span id="preloaderText">Inicializando experiencia</span>
+        </div>
+    </div>
+</div>
+
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero" id="inicio">
+
+    <div class="hero-background"></div>
+    <canvas class="hero-particles" id="heroParticles"></canvas>
+    <div class="light light-one"></div>
+    <div class="light light-two"></div>
+    <div class="light light-three"></div>
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            <span></span>
+            Diseño Creativo + AI
+        </div>
+
+        <h1>
+            <span>-Diseño Grafico</span>
+            <span>-Diseño Web</span>
+            <span>-Rendering</span>
+            <strong>-IA Generativa</strong>
+            <strong>-Apps Web/Android</strong>
+        </h1>
+
+        <p class="hero-description">
+            Combino creatividad, tecnología y contenidos potenciados con <span class="accent">Inteligencia Artificial.</span>,
+            
+        </p>
+
+        <div class="hero-buttons">
+            <a href="portafolio.html" class="button button-primary">
+                Portafolio - Book <span>→</span>
+            </a>
+
+            <a href="assets/CV-escm-2026.pdf"
+               class="button button-secondary"
+               download>
+                Descargar CV <span>↓</span>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-portrait">
+        <div class="portrait-glow"></div>
+
+        <img
+            class="portrait"
+            src="assets/hero2.webp"
+            alt="Erick Castañeda"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+        >
+
+        <div class="portrait-fallback" style="display:none"></div>
+    </div>
+
+    <aside class="specialties">
+        <div class="specialty ai"><span></span><strong>INTELIGENCIA ARTIFICIAL</strong></div>
+        <div class="specialty martech"><span></span><strong>Diseño Grafico</strong></div>
+        <div class="specialty automation"><span></span><strong>Rendering</strong></div>
+        <div class="specialty creative"><span></span><strong>Creatividad</strong></div>
+        <div class="specialty video"><span></span><strong>Diseño Web</strong></div>
+        <div class="specialty ux"><span></span><strong>Apps</strong></div>
+    </aside>
+
+    <div class="explore">
+        <div class="mouse"><span></span></div>
+        <span>Explora</span>
+    </div>
+
+</section>
+
+<!-- =========================
+     RECRUITER PANEL
+========================= -->
+<section class="recruiter-panel" id="recruiter-panel" aria-hidden="true">
+
+    <div class="recruiter-section">
+
+        <div class="recruiter-content">
+
+            <div class="recruiter-left">
+                <h2>
+                    Espacio para Reclutadores
+                    <span class="bolt">⚡</span>
+                </h2>
+
+                <p class="recruiter-eyebrow">Resumen rápido</p>
+
+                <ul class="recruiter-features">
+                    <li>
+                        <span class="check">✓</span>
+                        <span>18+ años en marketing digital, creatividad y producción de contenido</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span>Especialista en campañas B2B y generación de demanda</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span>Experiencia en IA generativa, automatización y MarTech</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span>Dominio de Adobe, Figma, herramientas de IA y video</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span>Enfoque en resultados, eficiencia y escalabilidad</span>
+                    </li>
+                </ul>
+
+                <!-- Botón de descarga de CV en PDF -->
+                <a href="assets/CV-escm-2026.pdf"
+                   class="cv-button"
+                   download
+                   aria-label="Descargar CV en PDF">
+                    Descargar CV en PDF
+                    <span class="download">⇩</span>
+                </a>
+                <span class="cv-hint">Descarga mi CV</span>
+            </div>
+
+            <div class="hire-card">
+                <h3>¿Por qué contratarme?</h3>
+
+                <div class="hire-item pink">
+                    <div class="number">01</div>
+                    <div class="item-text">
+                        <div class="item-title">Creador de</div>
+                        <div class="item-description">
+                            Contenido, diseño, video
+                            y experiencias digitales.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hire-item blue">
+                    <div class="number">02</div>
+                    <div class="item-text">
+                        <div class="item-title">Implementador de</div>
+                        <div class="item-description">
+                            IA, automatización y sistemas
+                            para producir más rápido.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hire-item pink">
+                    <div class="number">03</div>
+                    <div class="item-text">
+                        <div class="item-title">Optimizador de</div>
+                        <div class="item-description">
+                            Datos, procesos y campañas
+                            orientadas a resultados.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- EXPERIENCIA -->
+        <div class="recruiter-experience">
+
+            <div class="recruiter-exp-header">
+                <h3>Experiencia</h3>
+                <p>18+ años · 2006 — Actualidad</p>
+            </div>
+
+            <div class="recruiter-exp-grid">
+
+                <article class="recruiter-exp-item current">
+                    <div class="recruiter-exp-year">2026 — Actualidad</div>
+                    <h4>Eventrix Events</h4>
+                    <em>Agencia / Produccion de eventos</em>
+                    <ul>
+                        <li>Diseño y renderizado de eventos </li>
+                        <li>Programación y Desarrollo apps </li>
+                        <li>Integración de IA en flujos de trabajo</li>
+                        <li>Diseño y programacion web</li>
+                        <li>Coordinación de eventos corporativos</li>
+                    </ul>
+                    <div class="recruiter-exp-tags">
+                        <span class="recruiter-exp-tag">Diseño Grafico</span>
+                        <span class="recruiter-exp-tag">IA</span>
+                        <span class="recruiter-exp-tag">Automatización</span>
+                        <span class="recruiter-exp-tag">Programador Vibe Code</span>
+                    </div>
+                </article>
+
+                <article class="recruiter-exp-item">
+                    <div class="recruiter-exp-year">2025 — 2022</div>
+                    <h4>Netsoft</h4>
+                    <em>Asociado de Oracle Netsuite</em>
+                    <ul>
+                        <li>Diseño digital interno</li>
+                        <li>Producción de video y contenido multicanal Stream</li>
+                        <li>Gestión de redes sociales</li>
+                        <li>Coordinacion de contenidos Latam</li>
+                    </ul>
+                    <div class="recruiter-exp-tags">
+                        <span class="recruiter-exp-tag">Contenido</span>
+                        <span class="recruiter-exp-tag">Stream</span>
+                        <span class="recruiter-exp-tag">MarTech</span>
+                        <span class="recruiter-exp-tag">Diseño interno</span>
+                    </div>
+                </article>
+
+                <article class="recruiter-exp-item">
+                    <div class="recruiter-exp-year">2022 — 2020</div>
+                    <h4>Volt Impact</h4>
+                    <em>Agencia Creativa</em>
+                    <ul>
+                        <li>Diseño Stands/Escenográfias</li>
+                        <li>Diseño grafico medios impresos</li>
+                        <li>Colaboración con equipos de desarrollo</li>
+                        <li>Supervisor de eventos</li>
+                    </ul>
+                    <div class="recruiter-exp-tags">
+                        <span class="recruiter-exp-tag">Diseño Stands</span>
+                        <span class="recruiter-exp-tag">Escenográfias</span>
+                        <span class="recruiter-exp-tag">Diseño de Interiores</span>
+                        <span class="recruiter-exp-tag">Impresos</span>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     VALUE PILLARS
+========================= -->
+<section class="section value-section" id="valor">
+    <div class="section-inner">
+
+        <div class="section-head reveal">
+            <div class="section-eyebrow">01 / Valor</div>
+            <div>
+                <h2 class="section-title">Un perfil híbrido para problemas complejos.</h2>
+                <p class="section-copy">
+                    Cuatro capacidades que se activan en conjunto: crear, acelerar, automatizar y optimizar.
+                </p>
+            </div>
+        </div>
+
+        <div class="pillars reveal" id="pillars">
+            <article class="pillar">
+                <div class="pillar-num">01</div>
+                <h3>Crear</h3>
+                <p>Concepto, diseño, contenido, video y experiencias que conectan con la audiencia.</p>
+            </article>
+            <article class="pillar">
+                <div class="pillar-num">02</div>
+                <h3>Acelerar</h3>
+                <p>IA integrada al proceso creativo para explorar, producir y escalar más rápido.</p>
+            </article>
+            <article class="pillar">
+                <div class="pillar-num">03</div>
+                <h3>Automatizar</h3>
+                <p>Sistemas y flujos de trabajo que convierten tareas repetitivas en procesos eficientes.</p>
+            </article>
+            <article class="pillar">
+                <div class="pillar-num">04</div>
+                <h3>Optimizar</h3>
+                <p>Iteración basada en objetivos, datos y aprendizaje continuo.</p>
+            </article>
+        </div>
+
+    </div>
+</section>
+
+<!-- =========================
+     PROJECTS
+========================= -->
+<section class="section projects-section" id="proyectos">
+
+    <div class="projects-header reveal">
+        <div>
+            <h2>Muestro decisiones,<br>no solo piezas.</h2>
+            <p>Casos reales. Problema → sistema → resultado.</p>
+        </div>
+
+        <a href="portafolio.html" class="projects-link">
+            Ver todos los proyectos <span>→</span>
+        </a>
+    </div>
+
+    <div class="projects-carousel reveal">
+
+        <!-- 1 -->
+        <article class="project-card">
+            <div class="project-image">
+                <div class="project-image-placeholder"></div>
+                <img src="assets/pyto1.webp" alt="Campaña B2B SaaS">
+                <div class="image-overlay"></div>
+            </div>
+
+            <div class="project-content">
+                <h3>Oculoplástica Sin Fronteras VI</h3>
+                <p>Diseño de identidad corporativa para evento anual para oculistas plasticos.</p>
+
+                <div class="project-tags">
+                    <span class="tag">Branding</span>
+                    <span class="tag">Identidad</span>
+                    <span class="tag">Digital</span>
+                </div>
+
+                <div class="project-bottom">
+                    <div class="metrics">
+                        <div>
+                            <strong data-counter="5" data-prefix="+" data-suffix="">+0%</strong>
+                            <span>Propuestas</span>
+                        </div>
+                        <div>
+                            <strong data-counter="60" data-suffix="Dias">0%</strong>
+                            <span>De proyecto</span>
+                        </div>
+                    </div>
+                    <a href="portafolio.html" class="project-arrow" aria-label="Ver caso">↗</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="project-card">
+            <div class="project-image">
+                <div class="project-image-placeholder"></div>
+                <img src="assets/pyto2.webp" alt="Lanzamiento de producto">
+                <div class="image-overlay"></div>
+            </div>
+
+            <div class="project-content">
+                <h3>Funky Boba</h3>
+                <p>Diseño para espacio comercial.</p>
+
+                <div class="project-tags">
+                    <span class="tag">Rendering</span>
+                    <span class="tag">Diseño Interior</span>
+                    <span class="tag">Espacio Comercial</span>
+                </div>
+
+                <div class="project-bottom">
+                    <div class="metrics">
+                        <div>
+                            <strong data-counter="100" data-prefix="" data-suffix="%">+0%</strong>
+                            <span>Proyecto Concluido</span>
+                        </div>
+                        <div>
+                            <strong data-counter="90" data-suffix="Dias">0M</strong>
+                            <span>Concluido</span>
+                        </div>
+                    </div>
+                    <a href="portafolio.html" class="project-arrow" aria-label="Ver caso">↗</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="project-card">
+            <div class="project-image">
+                <div class="project-image-placeholder"></div>
+                <img src="assets/pyto3.webp" alt="Producción de video">
+                <div class="image-overlay"></div>
+            </div>
+
+            <div class="project-content">
+                <h3>Streaming Web</h3>
+                <p>Streaming para evento interno Uber Konecta Uronix</p>
+
+                <div class="project-tags">
+                    <span class="tag">Stream</span>
+                    <span class="tag">Live</span>
+                    <span class="tag">Transmisión</span>
+                </div>
+
+                <div class="project-bottom">
+                    <div class="metrics">
+                        <div>
+                            <strong data-counter="2" data-suffix="Horas">0×</strong>
+                            <span>Transmision</span>
+                        </div>
+                        <div>
+                            <strong data-counter="10" data-suffix="Personas">0%</strong>
+                            <span>Team</span>
+                        </div>
+                    </div>
+                    <a href="portafolio.html" class="project-arrow" aria-label="Ver caso">↗</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="project-card">
+            <div class="project-image">
+                <div class="project-image-placeholder"></div>
+                <img src="assets/pyto4.webp" alt="Rebranding corporativo">
+                <div class="image-overlay"></div>
+            </div>
+
+            <div class="project-content">
+                <h3>Oculoplástica Sin Fronteras</h3>
+                <p>Coordinacion de evento realizado en cancún Mx.</p>
+
+                <div class="project-tags">
+                    <span class="tag">Evento</span>
+                    <span class="tag">Coordinación</span>
+                    <span class="tag">Management</span>
+                </div>
+
+                <div class="project-bottom">
+                    <div class="metrics">
+                        <div>
+                            <strong data-counter="200" data-prefix="+" data-suffix="">+0%</strong>
+                            <span>Asistentes</span>
+                        </div>
+                        <div>
+                            <strong data-counter="5" data-suffix="Dias">0%</strong>
+                            <span>de evento</span>
+                        </div>
+                    </div>
+                    <a href="portafolio.html" class="project-arrow" aria-label="Ver caso">↗</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="project-card">
+            <div class="project-image">
+                <div class="project-image-placeholder"></div>
+                <img src="assets/eventrixweb.webp" alt="E-commerce premium">
+                <div class="image-overlay"></div>
+            </div>
+
+            <div class="project-content">
+                <h3>Eventrix</h3>
+                <p>Rediseño pagina web.</p>
+
+                <div class="project-tags">
+                    <span class="tag">UX/UI</span>
+                    <span class="tag">Website</span>
+                    <span class="tag">IA</span>
+                </div>
+
+                <div class="project-bottom">
+                    <div class="metrics">
+                        <div>
+                            <strong data-counter="4" data-prefix="" data-suffix="IA">+0%</strong>
+                            <span>Herramientas</span>
+                        </div>
+                        <div>
+                            <strong data-counter="3" data-suffix="Dias">0%</strong>
+                            <span>Desarrollo</span>
+                        </div>
+                    </div>
+                    <a href="portafolio.html" class="project-arrow" aria-label="Ver caso">↗</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="project-card">
+            <div class="project-image">
+                <div class="project-image-placeholder"></div>
+                <img src="assets/pyto6.webp" alt="Estrategia de redes sociales">
+                <div class="image-overlay"></div>
+            </div>
+
+            <div class="project-content">
+                <h3>Diseño Grafico Digital</h3>
+                <p>Parrilla de contenido, community management y paid media.</p>
+
+                <div class="project-tags">
+                    <span class="tag">Social</span>
+                    <span class="tag">Paid media</span>
+                    <span class="tag">Community</span>
+                </div>
+
+                <div class="project-bottom">
+                    <div class="metrics">
+                        <div>
+                            <strong data-counter="183" data-prefix="+" data-suffix="%">+0%</strong>
+                            <span>Seguidores</span>
+                        </div>
+                        <div>
+                            <strong data-counter="8.4" data-suffix="%">0%</strong>
+                            <span>Interacción</span>
+                        </div>
+                    </div>
+                    <a href="portafolio.html" class="project-arrow" aria-label="Ver caso">↗</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="project-card">
+            <div class="project-image">
+                <div class="project-image-placeholder"></div>
+                <img src="assets/pyto7.webp" alt="App móvil fintech">
+                <div class="image-overlay"></div>
+            </div>
+
+            <div class="project-content">
+                <h3>App móvil — Invitacion interactiva</h3>
+                <p>Diseño de invitacion digital interactiva.</p>
+
+                <div class="project-tags">
+                    <span class="tag">Invitacion</span>
+                    <span class="tag">Mobile</span>
+                    <span class="tag">Design system</span>
+                </div>
+
+                <div class="project-bottom">
+                    <div class="metrics">
+                        <div>
+                            <strong data-counter="95" data-suffix="%">0%</strong>
+                            <span>Adopción</span>
+                        </div>
+                        <div>
+                            <strong data-counter="4.8" data-suffix="/5">0/5</strong>
+                            <span>Valoración</span>
+                        </div>
+                    </div>
+                    <a href="portafolio.html" class="project-arrow" aria-label="Ver caso">↗</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="project-card">
+            <div class="project-image">
+                <div class="project-image-placeholder"></div>
+                <img src="assets/pyto8.webp" alt="Campaña 360">
+                <div class="image-overlay"></div>
+            </div>
+
+            <div class="project-content">
+                <h3>Diseño Web</h3>
+                <p>Diseño web para pagina de hangar Ciudad de México</p>
+
+                <div class="project-tags">
+                    <span class="tag">Diseño Web</span>
+                    <span class="tag">Aviación</span>
+                    <span class="tag">Integración Chatbot</span>
+                </div>
+
+                <div class="project-bottom">
+                    <div class="metrics">
+                        <div>
+                            <strong data-counter="5" data-suffix="Dias">0M</strong>
+                            <span>Desarrollo</span>
+                        </div>
+                        <div>
+                            <strong data-counter="4" data-suffix="IAs">0%</strong>
+                            <span>Usadas</span>
+                        </div>
+                    </div>
+                    <a href="portafolio.html" class="project-arrow" aria-label="Ver caso">↗</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="project-card">
+            <div class="project-image">
+                <div class="project-image-placeholder"></div>
+                <img src="assets/pyto9.webp" alt="Automatización con IA">
+                <div class="image-overlay"></div>
+            </div>
+
+            <div class="project-content">
+                <h3>Rendering</h3>
+                <p>Modelado y renderizado 3D usando solo planos y fotografias.</p>
+
+                <div class="project-tags">
+                    <span class="tag">IA</span>
+                    <span class="tag">Modelado 3D</span>
+                    <span class="tag">Animacion 3D</span>
+                </div>
+
+                <div class="project-bottom">
+                    <div class="metrics">
+                        <div>
+                            <strong data-counter="36" data-suffix="Horas">0%</strong>
+                            <span>Modelado</span>
+                        </div>
+                        <div>
+                            <strong data-counter="20" data-prefix="+" data-suffix="">+0h</strong>
+                            <span>Horas Render</span>
+                        </div>
+                    </div>
+                    <a href="portafolio.html" class="project-arrow" aria-label="Ver caso">↗</a>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+<div class="projects-pagination">
+    <button class="pagination-dot active" type="button" aria-label="Página 1"></button>
+    <button class="pagination-dot" type="button" aria-label="Página 2"></button>
+    <button class="pagination-dot" type="button" aria-label="Página 3"></button>
+</div>
+
+</section>
+
+<!-- =========================
+     AI
+========================= -->
+<section class="section ai-section" id="ia">
+    <div class="section-inner">
+
+        <div class="section-head reveal">
+            <div class="section-eyebrow">03 / IA nativa</div>
+            <div>
+                <h2 class="section-title">La IA no es una sección.<br>Es parte del proceso.</h2>
+                <p class="section-copy">
+                    El valor no está en "usar IA", sino en diseñar un flujo de trabajo donde la IA
+                    acelere exploración, producción y aprendizaje sin perder dirección creativa.
+                </p>
+            </div>
+        </div>
+
+        <div class="ai-visual reveal">
+            <div class="ai-visual-glow"></div>
+
+            <div class="ai-visual-stage">
+                <lottie-player
+                    id="aiLottie"
+                    src="https://assets9.lottiefiles.com/packages/lf20_kkflmtur.json"
+                    background="transparent"
+                    speed="1"
+                    loop
+                    autoplay>
+                </lottie-player>
+            </div>
+
+            <div class="ai-visual-copy">
+                <div class="ai-visual-badge">
+                    <span class="pulse-dot"></span>
+                    IA activa en cada etapa
+                </div>
+                <h3>Un sistema donde la IA <em>trabaja con</em> el criterio creativo.</h3>
+                <p>
+                    No se trata de reemplazar al creativo, sino de multiplicar su alcance:
+                    más exploración, más variantes, más velocidad de iteración —con la misma
+                    dirección y el mismo estándar.
+                </p>
+                <ul class="ai-mini-list">
+                    <li>Exploración asistida por IA</li>
+                    <li>Producción de contenido escalable</li>
+                    <li>Automatización de flujos repetibles</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="ai-process" id="aiProcess">
+            <div class="step"><div class="mono">01</div><strong>Definir</strong><small>Objetivo y brief</small></div>
+            <div class="step"><div class="mono">02</div><strong>Explorar</strong><small>Ideas y conceptos</small></div>
+            <div class="step"><div class="mono">03</div><strong>Generar</strong><small>Visual y contenido</small></div>
+            <div class="step"><div class="mono">04</div><strong>Diseñar</strong><small>Dirección creativa</small></div>
+            <div class="step"><div class="mono">05</div><strong>Automatizar</strong><small>Sistemas y flujos</small></div>
+            <div class="step"><div class="mono">06</div><strong>Optimizar</strong><small>Aprender e iterar</small></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- =========================
+     TOOLKIT
+========================= -->
+<section class="section toolkit-section" id="skills">
+    <div class="section-inner">
+
+        <div class="section-head reveal">
+            <div class="section-eyebrow">04 / Herramientas</div>
+            <div>
+                <h2 class="section-title">Las herramientas son palanca.</h2>
+            </div>
+        </div>
+
+        <div class="skills reveal" id="skillsList">
+            <span class="skill">Adobe Creative Cloud</span>
+            <span class="skill">Figma</span>
+            <span class="skill">Chat GPT, Gemini, Deep Seek, Kimi, Claude</span>
+            <span class="skill">HTML / CSS / JS</span>
+            <span class="skill">OBS Studio</span>
+            <span class="skill">Resolume Arena</span>
+            <span class="skill">N8N</span>
+            <span class="skill">RhinoCeros</span>
+            <span class="skill">AutoCad</span>
+            <span class="skill">Lumion</span>
+            <span class="skill">Google Studio IA</span>
+            <span class="skill">Wirecast</span>
+            <span class="skill">3D Studio Max</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- =========================
+     CONTACT
+========================= -->
+<section class="contact-section" id="contacto">
+    <div class="contact-inner reveal">
+
+        <div>
+            <div class="contact-eyebrow">05 / Construyamos</div>
+            <h2>¿Tienes un reto que necesita <strong>creatividad + tecnología</strong>?</h2>
+        </div>
+
+        <div class="contact-links">
+            <a class="button button-primary" href="mailto:yeistudio11@gmail.com">
+                Correo <span>↗</span>
+            </a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/e-merch?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener">
+                LinkedIn <span>↗</span>
+            </a>
+            <a class="button button-whatsapp" href="https://wa.me/5215516003694?text=Hola!%20visite%20tu%20pagina%20y%20me%20gustaria%20platicar%20contigo." target="_blank" rel="noopener">
+                WhatsApp <span>↗</span>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <span>© 2026 Erick Castañeda</span>
+        <span>Creative Designer / AI Enginering/ Vibe Coder</span>
+    </div>
+</footer>
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+<a
+    class="whatsapp-float"
+    href="https://wa.me/5215516003694?text=Hola%20Erick%2C%20quiero%20hablar%20sobre%20un%20proyecto"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Escríbeme por WhatsApp"
+>
+    <span class="whatsapp-label">¿Hablamos? Escríbeme</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+</a>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

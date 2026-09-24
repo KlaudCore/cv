@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portafolio de Erick Castañeda — Diseño gráfico, 3D, Web, Audiovisual, IA y Eventos.">
+<title>Portafolio — Erick Castañeda</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="navbar" id="navbar">
+    <a href="index.html" class="brand">
+        <span class="brand-mark">EC</span>
+        <span class="brand-name">ERICK CASTAÑEDA</span>
+    </a>
+
+    <nav class="navigation">
+        <a href="index.html">Inicio</a>
+    </nav>
+</header>
+
+<main>
+
+<!-- =========================
+     HERO PORTAFOLIO
+========================= -->
+<section class="pf-hero">
+    <div class="pf-hero-bg"></div>
+    <canvas class="pf-hero-particles" id="pfParticles"></canvas>
+
+    <div class="pf-hero-content">
+        <div class="pf-eyebrow">Portafolio · 2026</div>
+
+        <h1 class="pf-hero-title">
+            Proyectos que <em>conectan</em><br>
+            diseño, tecnología<br>
+            y estrategia.
+        </h1>
+
+        <p class="pf-hero-desc">
+            Seis disciplinas, un mismo enfoque:<br>
+            Desde un logo hasta un stand, una web app <br>
+            una producción audiovisual potenciada por IA.
+        </p>
+
+        <div class="pf-hero-stats">
+            <div class="pf-stat">
+                <strong data-counter="6">0</strong>
+                <span>Disciplinas</span>
+            </div>
+            <div class="pf-stat">
+                <strong data-counter="280" data-prefix="+">0+</strong>
+                <span>Proyectos</span>
+            </div>
+            <div class="pf-stat">
+                <strong data-counter="18" data-prefix="+">0+</strong>
+                <span>Años de Experiencia</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+     TABS
+========================= -->
+<div class="pf-tabs-wrap">
+    <div class="pf-tabs-inner" role="tablist" id="pfTabs">
+        <button class="pf-tab active" data-cat="grafico" role="tab"><span class="tab-num">01</span> Diseño gráfico</button>
+        <button class="pf-tab" data-cat="tresd" role="tab"><span class="tab-num">02</span> Rendering 3D</button>
+        <button class="pf-tab" data-cat="web" role="tab"><span class="tab-num">03</span> Diseño Web/Apps</button>
+        <button class="pf-tab" data-cat="audiovisual" role="tab"><span class="tab-num">04</span> Audiovisual</button>
+        <button class="pf-tab" data-cat="ia" role="tab"><span class="tab-num">05</span> Inteligencia Artificial</button>
+        <button class="pf-tab" data-cat="eventos" role="tab"><span class="tab-num">06</span> Eventos</button>
+    </div>
+</div>
+
+<!-- =========================
+     VISTAS
+========================= -->
+<div class="pf-views" id="pfViews">
+
+    <!-- 01 DISEÑO GRÁFICO -->
+    <section class="pf-view active" data-view="grafico">
+        <div class="pf-view-header">
+            <div class="pf-view-num">01 / Diseño gráfico</div>
+            <h2 class="pf-view-title">Identidad visual que<br>construye marcas.</h2>
+            <p class="pf-view-desc">
+                Del símbolo al sistema. Logos, identidad corporativa, redes sociales,
+                editorial e impresos pensados para funcionar en cualquier soporte.
+            </p>
+            <div class="pf-view-tags">
+                <span class="pf-view-tag">Logotipos</span>
+                <span class="pf-view-tag">Identidad</span>
+                <span class="pf-view-tag">Redes sociales</span>
+                <span class="pf-view-tag">Ebooks</span>
+                <span class="pf-view-tag">Impresos</span>
+            </div>
+        </div>
+
+        <div class="pf-grid">
+            <button class="pf-item" data-cat="Identidad corporativa" data-year="2023"
+                data-title="Aurora Pino"
+                data-desc="Sistema de identidad completo para profesionista nutriologa: logotipo, paleta, tipografía, aplicaciones y manual de uso."
+                data-tags="Logo,Manual de marca,Papelería,Digital">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/dg-auro.webp" alt="Aurora Pino">
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Logo</span>
+                        <span class="pf-item-year">2023</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>Aurora Pino — Identidad Comercial</h3>
+                    <p>Identidad visual completa para firma de consultoría estratégica.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Logo</span>
+                        <span class="pf-item-tag">Manual</span>
+                        <span class="pf-item-tag">Papelería</span>
+                    </div>
+                </div>
+            </button>
+
+            <button class="pf-item" data-cat="Logotipo" data-year="2020"
+                data-title="Dekotivo — Logotipo"
+                data-desc="Diseño de logotipo y símbolo adaptable para estudio de decoración. Manual de estilo, Mock up de logo en productos."
+                data-tags="Logo,Isotipo,Aplicaciones">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/dg-deko.webp" alt="Dekotivo">
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Logotipo</span>
+                        <span class="pf-item-year">2020</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>Dekotivo — Logotipo</h3>
+                    <p>Sistema de marca minimalista para estudio de decoración.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Logo</span>
+                        <span class="pf-item-tag">Isotipo</span>
+                    </div>
+                </div>
+            </button>
+
+            <button class="pf-item" data-cat="Identidad Visual" data-year="2025"
+                data-title="Oculoplástica Sin Fronteras — Edición VI"
+                data-desc="Diseño de identidad visual para evento realizado en Cancún, México. Identidad para su sexta edición."
+                data-tags="Oculoplástica,TikTok,Logo,Congreso">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/dg-oculo.webp" alt="Oculoplástica Sin Fronteras">
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Logo</span>
+                        <span class="pf-item-year">2025</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>Oculoplástica Sin Fronteras — Edición VI</h3>
+                    <p>Kit de marca para uso en congreso.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Marca</span>
+                        <span class="pf-item-tag">Congreso</span>
+                    </div>
+                </div>
+            </button>
+
+            <button class="pf-item" data-cat="Isologo" data-year="2017"
+                data-title="Pink — Isologo"
+                data-desc="Diseño de logo para negocio comercial, para uso en redes sociales y local comercial."
+                data-tags="Isologo,Marca,Diseño Grafico,Spa">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/dg-pink.webp" alt="Pink — Isologo">
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Isologo</span>
+                        <span class="pf-item-year">2017</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>Pink — Isologo</h3>
+                    <p>Diseño de identidad para uso comercial.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Isologo</span>
+                        <span class="pf-item-tag">Marca</span>
+                        <span class="pf-item-tag">Identidad</span>
+                    </div>
+                </div>
+            </button>
+
+            <button class="pf-item" data-cat="Identidad Visual" data-year="2024"
+                data-title="XLV Reunión Anual"
+                data-desc="Diseño de identidad para evento anual Oaxaca."
+                data-tags="Identidad,Eventos,Logo,Diseño">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/dg-xlv.webp" alt="XLV Reunión Anual">
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Logo</span>
+                        <span class="pf-item-year">2024</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>XLV Reunión Anual de la Asociación Mexicana de Retina</h3>
+                    <p>Diseño de identidad visual para evento anual.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Papelería</span>
+                        <span class="pf-item-tag">Packaging</span>
+                    </div>
+                </div>
+            </button>
+
+            <button class="pf-item" data-cat="Identidad" data-year="2022"
+                data-title="Netsoft — Rediseño de manual de identidad"
+                data-desc="Rebranding completo: auditoría, nueva identidad verbal y visual, aplicación a web, app y piezas de campaña."
+                data-tags="Rebranding,Identidad,Verbal,Visual">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/dg-man1.webp" alt="Netsoft — Manual de identidad">
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Rebranding</span>
+                        <span class="pf-item-year">2022</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>Netsoft — Rediseño de manual de identidad</h3>
+                    <p>Rebranding integral con nueva identidad visual y verbal.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Identidad</span>
+                        <span class="pf-item-tag">Verbal</span>
+                    </div>
+                </div>
+            </button>
+
+            <button class="pf-item" data-cat="Identidad" data-year="2022 - 2025"
+                data-title="Netsoft — Diseño Digital"
+                data-desc="Diseño para redes sociales, social media content."
+                data-tags="Social Media,Diseño Digital,Generación de contenido">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/dg-redes.webp" alt="Netsoft — Social Media">
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Social Media</span>
+                        <span class="pf-item-year">2022 - 2025</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>Diseño para redes sociales, social media content</h3>
+                    <p>Diseño de contenido para empresa de tecnología CMDX.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Gestión de redes</span>
+                        <span class="pf-item-tag">Social Media</span>
+                        <span class="pf-item-tag">Digital Design</span>
+                    </div>
+                </div>
+            </button>
+
+            <button class="pf-item" data-cat="Identidad" data-year="2022 - 2025"
+                data-title="Ebook Design"
+                data-desc="Diseño de contenido digital para plataformas de blogging."
+                data-tags="Ebook,Content Digital,Editorial digital">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/dg-books.webp" alt="Ebook — Diseño digital">
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Ebooks</span>
+                        <span class="pf-item-year">2022 - 2025</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>Ebook — Diseño digital</h3>
+                    <p>Ebooks para contenido de blogging.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Identidad</span>
+                        <span class="pf-item-tag">Verbal</span>
+                    </div>
+                </div>
+            </button>
+
+        </div>
+    </section>
+
+    <!-- 02 RENDERING 3D -->
+    <section class="pf-view" data-view="tresd">
+        <div class="pf-view-header">
+            <div class="pf-view-num">02 / Rendering y modelado 3D</div>
+            <h2 class="pf-view-title">Espacios que se<br>sienten antes de existir.</h2>
+            <p class="pf-view-desc">
+                Modelado y visualización fotorrealista para stands, espacios comerciales,
+                escenografías y congresos. Cada render es una decisión de negocio,
+                no solo una imagen bonita.
+            </p>
+            <div class="pf-view-tags">
+                <span class="pf-view-tag">Stands</span>
+                <span class="pf-view-tag">Retail</span>
+                <span class="pf-view-tag">Escenografías</span>
+                <span class="pf-view-tag">Congresos</span>
+            </div>
+        </div>
+
+        <div class="pf-grid">
+            <button class="pf-item" data-cat="Local" data-year="2018"
+                data-title="Espacio comercial — Funky Boba"
+                data-desc="Tuve la oportunidad de crear la propuesta y desarrollo de este espacio comercial donde se propuso un flujo de trabajo optimo asi como de la propuesta de identidad y graficos decorativos, diseñamos mobiliario y optimizamos iluminacion para lograr armonia."
+                data-tags="Local,Diseño Interiores,Rendering,Iluminación">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/pyto2.webp" alt="Local comercial Funky Boba">
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Local Comercial</span>
+                        <span class="pf-item-year">2018</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>Local Comercial — Funky Boba</h3>
+                    <p>Espacio comercial con diseño de interior, mobiliario y propuesta lumínica.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Local</span>
+                        <span class="pf-item-tag">Espacio Comercial</span>
+                        <span class="pf-item-tag">Diseño de interiores</span>
+                    </div>
+                </div>
+            </button>
+
+            <!-- ⬇⬇⬇ 00 MÚLTIPLES IMÁGENES + VIDEO ⬇⬇⬇ -->
+            <button class="pf-item" data-cat="Evento" data-year="2025"
+                data-title="Ovaciones 100 años"
+                data-desc="Haciendo toma de medidas en restaurante al sur de la cdmx se procedio al modelado y rendering para presentacion al cliente."
+                data-tags="Evento,Ovaciones,Rendering">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/es-ovac1.webp" alt="Stand Open Bank">
+                        <img src="assets/es-ovac2.webp" alt="Flagship Stand Open Bank">
+                        <img src="assets/es-ovac3.webp" alt="Flagship Stand Open Bank">
+                        <img src="assets/es-ovac4.webp" alt="Flagship Stand Open Bank">
+
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Evento</span>
+                        <span class="pf-item-year">2025</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                    <!-- Los dots se generan dinámicamente por JS (initPfCardSliders) -->
+                    <div class="pf-item-dots"></div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>Ovaciones 100 años</h3>
+                    <p>Modelado Rendering en restaurante Arroyo CMDX.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Evento</span>
+                        <span class="pf-item-tag">Rendering</span>
+                        <span class="pf-item-tag">4k</span>
+                    </div>
+                </div>
+            </button>
+            <!-- ⬆⬆⬆ FIN MODO MULTIPLE ⬆⬆⬆ -->    
+             
+            <!-- ⬇⬇⬇ 01 MÚLTIPLES IMÁGENES + VIDEO ⬇⬇⬇ -->
+            <button class="pf-item" data-cat="Escenografía" data-year="2025"
+                data-title="Escenografía — SOPANOP 2025"
+                data-desc="Para este proyecto se apoyo 100% con Identidad Visual, Escenografía, Rendering y Stands. Para evento en Cancún México ."
+                data-tags="Escenografía,planos,Stand,Rendering">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/sopanop01.webp" alt="SOPANOP 2025">
+                        <img src="assets/sopanop02.webp" alt="SOPANOP 2025">
+                        <img src="assets/sopanop03.webp" alt="SOPANOP 2025">
+                        <img src="assets/sopanop04.webp" alt="SOPANOP 2025">
+                        <img src="assets/sopanop05.webp" alt="SOPANOP 2025">
+                        <img src="assets/sopanop06.webp" alt="SOPANOP 2025">
+                        <img src="assets/sopanop07.webp" alt="SOPANOP 2025">
+                        <img src="assets/sopanop08.webp" alt="SOPANOP 2025"> 
+                        <img src="assets/sopanop09.webp" alt="SOPANOP 2025">  
+                        <!-- VIDEO: poster apunta a una IMAGEN real (no al propio .webm) -->
+
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Escenografía</span>
+                        <span class="pf-item-year">2025</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                    <!-- Los dots se generan dinámicamente por JS (initPfCardSliders) -->
+                    <div class="pf-item-dots"></div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>Escenografía — Sopanop</h3>
+                    <p>Rendering Evento SOPANOP 2025.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">escenografía</span>
+                        <span class="pf-item-tag">Stands</span>
+                        <span class="pf-item-tag">Rendering</span>
+                    </div>
+                </div>
+            </button>
+            <!-- ⬆⬆⬆ FIN MODO MULTIPLE ⬆⬆⬆ -->             
+
+            <!-- ⬇⬇⬇ 02 MÚLTIPLES IMÁGENES + VIDEO ⬇⬇⬇ -->
+            <button class="pf-item" data-cat="Stand" data-year="2022"
+                data-title="Open Bank — Stand 6x6"
+                data-desc="Visualización completa de stand comercial en un espacio 6x6m."
+                data-tags="Stand,Mudular,Isla,Rendering">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/3d-opbnk4.webp" alt="Stand Open Bank">
+                        <img src="assets/3d-opbnk1.webp" alt="Flagship Stand Open Bank">
+                        <img src="assets/3d-opbnk2.webp" alt="Flagship Stand Open Bank">
+                        <img src="assets/3d-opbnk3.webp" alt="Flagship Stand Open Bank">
+
+                        <!-- VIDEO: poster apunta a una IMAGEN real (no al propio .webm) -->
+                        <video src="assets/std-openbank04.webm"
+                               poster="assets/3d-opbnk1.webp"
+                               muted loop playsinline preload="metadata"></video>
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Stand</span>
+                        <span class="pf-item-year">2022</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                    <!-- Los dots se generan dinámicamente por JS (initPfCardSliders) -->
+                    <div class="pf-item-dots"></div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>Open Bank — Stand 6x6</h3>
+                    <p>Render 4K Stand Open Bank modular.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Stand</span>
+                        <span class="pf-item-tag">Rendering</span>
+                        <span class="pf-item-tag">4k</span>
+                    </div>
+                </div>
+            </button>
+            <!-- ⬆⬆⬆ FIN MODO MULTIPLE ⬆⬆⬆ -->
+
+            <!-- ⬇⬇⬇ 03 MÚLTIPLES IMÁGENES + VIDEO ⬇⬇⬇ -->
+            <button class="pf-item" data-cat="Stand" data-year="2022"
+                data-title="schaeffler — Stand 6x6"
+                data-desc="Visualización completa de stand comercial en un espacio 6x4m."
+                data-tags="Stand,Mudular,Cabecera,Rendering">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/3d-sch4.webp" alt="Seinco">
+                        <img src="assets/3d-sch1.webp" alt="Flagship Seinco">
+                        <img src="assets/3d-sch2.webp" alt="Flagship Seinco">
+                        <img src="assets/3d-sch3.webp" alt="Flagship Seinco">
+
+                        <!-- VIDEO: poster apunta a una IMAGEN real (no al propio .webm) -->
+                        <video src="assets/std-schaeffler.webm"
+                               poster="assets/3d-sch1.webp"
+                               muted loop playsinline preload="metadata"></video>
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Stand</span>
+                        <span class="pf-item-year">2023</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                    <!-- Los dots se generan dinámicamente por JS (initPfCardSliders) -->
+                    <div class="pf-item-dots"></div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>schaeffler — Stand 6x6</h3>
+                    <p>Render 4K Stand schaeffler doble piso.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Stand</span>
+                        <span class="pf-item-tag">Rendering</span>
+                        <span class="pf-item-tag">4k</span>
+                    </div>
+                </div>
+            </button>
+            <!-- ⬆⬆⬆ FIN MODO MULTIPLE ⬆⬆⬆ -->
+
+            <!-- ⬇⬇⬇ 04 MÚLTIPLES IMÁGENES + VIDEO ⬇⬇⬇ -->
+            <button class="pf-item" data-cat="Stand" data-year="2020"
+                data-title="Seinco — Stand 6x6"
+                data-desc="Visualización completa de stand comercial en un espacio 6x6m."
+                data-tags="Stand,Mudular,Esquina,Rendering">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/3d-seinco4.webp" alt="Seinco">
+                        <img src="assets/3d-seinco1.webp" alt="Flagship Seinco">
+                        <img src="assets/3d-seinco2.webp" alt="Flagship Seinco">
+                        <img src="assets/3d-seinco3.webp" alt="Flagship Seinco">
+
+                        <!-- VIDEO: poster apunta a una IMAGEN real (no al propio .webm) -->
+                        <video src="assets/std-seico02.webm"
+                               poster="assets/3d-seinco1.webp"
+                               muted loop playsinline preload="metadata"></video>
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Stand</span>
+                        <span class="pf-item-year">2020</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                    <!-- Los dots se generan dinámicamente por JS (initPfCardSliders) -->
+                    <div class="pf-item-dots"></div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>Seinco — Stand 6x6</h3>
+                    <p>Render 4K Stand Seinco Posición Esquina.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Stand</span>
+                        <span class="pf-item-tag">Rendering</span>
+                        <span class="pf-item-tag">4k</span>
+                    </div>
+                </div>
+            </button>
+            <!-- ⬆⬆⬆ FIN MODO MULTIPLE ⬆⬆⬆ -->
+
+            <!-- ⬇⬇⬇ 05 MÚLTIPLES IMÁGENES + VIDEO ⬇⬇⬇ -->
+            <button class="pf-item" data-cat="Stand" data-year="2023"
+                data-title="Fiserv — Stand 3x3"
+                data-desc="Visualización completa de stand comercial en un espacio 6x6m."
+                data-tags="Stand,Mudular,Isla,Rendering">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/3d-fiserv.webp" alt="Fiserv">
+
+                        <!-- VIDEO: poster apunta a una IMAGEN real (no al propio .webm) -->
+                        <video src="assets/std-fiserv.webm"
+                               poster="assets/3d-fiserv.webp"
+                               muted loop playsinline preload="metadata"></video>
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Stand</span>
+                        <span class="pf-item-year">2023</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                    <!-- Los dots se generan dinámicamente por JS (initPfCardSliders) -->
+                    <div class="pf-item-dots"></div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>Fiserv — Stand 3x3</h3>
+                    <p>Render 4K Stand schaeffler doble piso.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Stand</span>
+                        <span class="pf-item-tag">Rendering</span>
+                        <span class="pf-item-tag">4k</span>
+                    </div>
+                </div>
+            </button>
+            <!-- ⬆⬆⬆ FIN MODO MULTIPLE ⬆⬆⬆ -->            
+
+            <!-- ⬇⬇⬇ 06 MÚLTIPLES IMÁGENES + VIDEO ⬇⬇⬇ -->
+            <button class="pf-item" data-cat="Lanzamiento" data-year="2023"
+                data-title="Lanzamiento — Starfield"
+                data-desc="Visualización para activacion por lanzamiento de juego Starfield"
+                data-tags="Stand,Mudular,Isla,Rendering">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/lc-starfield01.webp" alt="Starfield">
+                        <img src="assets/lc-starfield02.webp" alt="Starfield">
+                        <img src="assets/lc-starfield03.webp" alt="Starfield">
+                      
+                        <!-- VIDEO: poster apunta a una IMAGEN real (no al propio .webm) -->
+
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Lanzamiento</span>
+                        <span class="pf-item-year">2023</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                    <!-- Los dots se generan dinámicamente por JS (initPfCardSliders) -->
+                    <div class="pf-item-dots"></div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>Lanzamiento — Starfield</h3>
+                    <p>Render 4K Stand schaeffler doble piso.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Lanzamiento</span>
+                        <span class="pf-item-tag">Rendering</span>
+                        <span class="pf-item-tag">Exteriores</span>
+                    </div>
+                </div>
+            </button>
+            <!-- ⬆⬆⬆ FIN MODO MULTIPLE ⬆⬆⬆ -->  
+
+            <!-- ⬇⬇⬇ 07 MÚLTIPLES IMÁGENES + VIDEO ⬇⬇⬇ -->
+            <button class="pf-item" data-cat="Showroom" data-year="2024"
+                data-title="Espacio Comercial — Showroom"
+                data-desc="Rendering y Montaje de Showroom para marca Merino."
+                data-tags="Showroom,Merino Laminates,Espacio Comercial">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/lc-merino02.webp" alt="Escenografía">
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">Showroom</span>
+                        <span class="pf-item-year">2024</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>Espacio Comercial — Showroom Merino</h3>
+                    <p>Diseño y montaje de Showroom para marca Merino.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">Showroom</span>
+                        <span class="pf-item-tag">Espacio Comercial</span>
+                    </div>
+                </div>
+            </button>
+
+            
+
+        </div>
+    </section>
+
+<!-- 03 DISEÑO WEB -->
+<section class="pf-view" data-view="web">
+    <div class="pf-view-header">
+        <div class="pf-view-num">03 / Diseño web</div>
+        <h2 class="pf-view-title">Interfaces que se<br>sienten naturales.</h2>
+        <p class="pf-view-desc">
+            Diseño y desarrollo de páginas web, landing pages, web apps y dashboards.
+            Foco en usabilidad, performance y coherencia visual con la marca.
+        </p>
+        <div class="pf-view-tags">
+            <span class="pf-view-tag">Landing pages</span>
+            <span class="pf-view-tag">Web Apps</span>
+            <span class="pf-view-tag">E-commerce</span>
+            <span class="pf-view-tag">Dashboards</span>
+        </div>
+    </div>
+
+    <div class="pf-grid">
+        <button class="pf-item" data-cat="web" data-year="2026"
+            data-title="Website — EVENTRIX By Gerprimse"
+            data-desc="Diseño y desarrollo de pagina web. 98/100 PageSpeed, y copy optimizado."
+            data-tags="Website,IA,Programación,Html,CSS,JS"
+            data-live="https://eventrixmx.com/">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <img class="active" src="assets/web-event.webp" alt="Website">
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Website</span>
+                    <span class="pf-item-year">2026</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+            </div>
+            <div class="pf-item-content">
+                <h3>EVENTRIX</h3>
+                <p>Pagina optimizada SEO, HTML, CSS, JS.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Website</span>
+                    <span class="pf-item-tag">Html</span>
+                    <span class="pf-item-tag">Vibe Coding</span>
+                </div>
+            </div>
+        </button>
+
+        <button class="pf-item" data-cat="web" data-year="2026"
+            data-title="Website — Cenit Aviación"
+            data-desc="Diseño y desarrollo de pagina web."
+            data-tags="Website,IA,Programación,Html,CSS,JS"
+            data-live="https://cenitaviacion.com.mx/">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <img class="active" src="assets/web-cenit.webp" alt="Website">
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Website</span>
+                    <span class="pf-item-year">2026</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+            </div>
+            <div class="pf-item-content">
+                <h3>Cenit Aviación</h3>
+                <p>Chat bot, SEO, HTML, CSS, JS.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Website</span>
+                    <span class="pf-item-tag">Html</span>
+                    <span class="pf-item-tag">Vibe Coding</span>
+                </div>
+            </div>
+        </button>
+
+        <button class="pf-item" data-cat="web" data-year="2026"
+            data-title="Mr Burguer"
+            data-desc="Diseño y desarrollo de pagina web."
+            data-tags="Website,IA,Programación,Html,CSS,JS"
+            data-live="https://klaudcore.github.io/mrburger/">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <img class="active" src="assets/web-burguer.webp" alt="Website">
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Website</span>
+                    <span class="pf-item-year">2026</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+            </div>
+            <div class="pf-item-content">
+                <h3>Mr Burguer</h3>
+                <p>Diseño, SEO, HTML, CSS, JS.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Website</span>
+                    <span class="pf-item-tag">Html</span>
+                    <span class="pf-item-tag">Vibe Coding</span>
+                </div>
+            </div>
+        </button>
+
+        <button class="pf-item" data-cat="web" data-year="2026"
+            data-title="Mr Burguer"
+            data-desc="Diseño y desarrollo de pagina web."
+            data-tags="Website,IA,Programación,Html,CSS,JS"
+            data-live="https://klaudcore.github.io/solaria/">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <img class="active" src="assets/web-sola.webp" alt="Website">
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Website</span>
+                    <span class="pf-item-year">2026</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+            </div>
+            <div class="pf-item-content">
+                <h3>Solaria</h3>
+                <p>Diseño, SEO, HTML, CSS, JS.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Website</span>
+                    <span class="pf-item-tag">Html</span>
+                    <span class="pf-item-tag">Vibe Coding</span>
+                </div>
+            </div>
+        </button>
+        
+        <button class="pf-item" data-cat="Web App" data-year="2026"
+            data-title="Web App — Dashboard analítico"
+            data-desc="Diseño de web app para equipo de marketing: dashboard de métricas, gestión de campañas, reportes automáticos y sistema de gestión."
+            data-tags="Dashboard,Analytics,Campañas,Permisos"
+            data-live="https://klaudcore.github.io/dashboard-V3/">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <img class="active" src="assets/web-app1.webp" alt="Dashboard">
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Web App</span>
+                    <span class="pf-item-year">2026</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+            </div>
+            <div class="pf-item-content">
+                <h3>Web App — Dashboard analítico</h3>
+                <p>Sistema de métricas, campañas y reportes automáticos.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Dashboard</span>
+                    <span class="pf-item-tag">Analytics</span>
+                    <span class="pf-item-tag">Vibe Code</span>
+                </div>
+            </div>
+        </button>
+
+        <button class="pf-item" data-cat="Web App" data-year="2026"
+            data-title="Web App — Restaurante"
+            data-desc="Diseño de web app para Restaurantes con capacidad de consulta de mesas, pedidos , salidas de cocina."
+            data-tags="Dashboard,App,Restsoft,Bares"
+            data-live="https://klaudcore.github.io/mibar/">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <img class="active" src="assets/web-app2.webp" alt="Dashboard">
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Web App</span>
+                    <span class="pf-item-year">2026</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+            </div>
+            <div class="pf-item-content">
+                <h3>Web App — Dashboard Restaurante</h3>
+                <p>Sistema de Gestion de mesas, pedidos y cocina.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Dashboard</span>
+                    <span class="pf-item-tag">Analytics</span>
+                    <span class="pf-item-tag">Vibe Code</span>
+                </div>
+            </div>
+        </button>
+        
+        <button class="pf-item" data-cat="Web App" data-year="2026"
+            data-title="Web App — Invitación"
+            data-desc="Diseño de web app para Restaurantes con capacidad de consulta de mesas, pedidos , salidas de cocina."
+            data-tags="Dashboard,App,Restsoft,Bares"
+            data-live="https://klaudcore.github.io/boda/admin">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <img class="active" src="assets/web-app3.webp" alt="Dashboard">
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Web App</span>
+                    <span class="pf-item-year">2026</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+            </div>
+            <div class="pf-item-content">
+                <h3>Web App — Invitación</h3>
+                <p>Sistema de Gestion de invitados, Menú, Acompañantes, Mesa, QR.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Dashboard</span>
+                    <span class="pf-item-tag">Invitacion</span>
+                    <span class="pf-item-tag">Vibe Code</span>
+                </div>
+            </div>
+        </button>
+
+        <button class="pf-item" data-cat="Micrositio" data-year="2026"
+            data-title="Micrositio — Furius Man"
+            data-desc="Micrositio para producto de lanzamiento de perfume para hombre."
+            data-tags="Micrositio,Furius Man"
+            data-live="https://klaudcore.github.io/furius/">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <img class="active" src="assets/web-furius.webp" alt="Micrositio">
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Micrositio</span>
+                    <span class="pf-item-year">2026</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+            </div>
+            <div class="pf-item-content">
+                <h3>Micrositio — Furius Man</h3>
+                <p>Registro, agenda, lanzamiento de producto.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Lanzamiento</span>
+                    <span class="pf-item-tag">Streaming</span>
+                </div>
+            </div>
+        </button>
+        
+        <button class="pf-item" data-cat="Micrositio" data-year="2026"
+            data-title="Micrositio — Santuario"
+            data-desc="Micrositio Santuario de las luciernagas."
+            data-tags="Micrositio,Santuario"
+            data-live="https://klaudcore.github.io/luzci/">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <img class="active" src="assets/web-luz.webp" alt="Micrositio">
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Micrositio</span>
+                    <span class="pf-item-year">2026</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+            </div>
+            <div class="pf-item-content">
+                <h3>Micrositio — Santuario</h3>
+                <p>Santuario de las luciernaga.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Landing</span>
+                    <span class="pf-item-tag">Streaming</span>
+                </div>
+            </div>
+        </button>
+
+    </div>
+</section>
+
+<!-- 04 AUDIOVISUAL -->
+<section class="pf-view" data-view="audiovisual">
+    <div class="pf-view-header">
+        <div class="pf-view-num">04 / Audiovisual</div>
+        <h2 class="pf-view-title">Movimiento que<br>cuenta historias.</h2>
+        <p class="pf-view-desc">
+            Producción audiovisual de principio a fin: streaming profesional,
+            motion graphics, video mapping y contenido para campañas.
+        </p>
+        <div class="pf-view-tags">
+            <span class="pf-view-tag">Streaming</span>
+            <span class="pf-view-tag">Motion graphics</span>
+            <span class="pf-view-tag">Video mapping</span>
+            <span class="pf-view-tag">Spots</span>
+        </div>
+    </div>
+
+    <div class="pf-grid">
+
+        <!-- 01 · STREAMING -->
+        <button class="pf-item" data-cat="Streaming" data-year="2020"
+            data-title="Streaming multi-cámara — Tech.it.simple"
+            data-desc="Producción de streaming en vivo con 4 cámaras, switcher, gráficos en tiempo real y salida a 3 plataformas simultáneas durante 2 horas."
+            data-tags="Streaming,Multi-cámara,Live,Gráficos">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <video class="active"
+                           src="assets/techit.webm"
+                           poster="assets/aud-tech.webp"
+                           muted loop playsinline preload="metadata"></video>
+                
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Streaming</span>
+                    <span class="pf-item-year">2020</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+                <div class="pf-item-dots"></div>
+            </div>
+            <div class="pf-item-content">
+                <h3>Streaming multi-cámara — Tech.it.simple</h3>
+                <p>Streaming echo por Uber, Auronix y Conekta.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Live</span>
+                    <span class="pf-item-tag">Multi-cámara</span>
+                </div>
+            </div>
+        </button>
+
+        <!-- 02 · STREAMING -->
+        <button class="pf-item" data-cat="Streaming" data-year="2023"
+            data-title="Streaming — HPE Tour Peru"
+            data-desc="Producción de streaming en vivo, switcher, gráficos en tiempo real y salida a peru desde mexico."
+            data-tags="Streaming,Multi-cámara,Live,Gráficos">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <video class="active"
+                           src="assets/hpe2023.webm"
+                           poster="assets/aud-hp.webp"
+                           muted loop playsinline preload="metadata"></video>
+                
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Streaming</span>
+                    <span class="pf-item-year">2023</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+                <div class="pf-item-dots"></div>
+            </div>
+            <div class="pf-item-content">
+                <h3>Streaming — HPE Tour Peru</h3>
+                <p>Streaming en Colaboración con perú desde la ciudad de México.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Live</span>
+                    <span class="pf-item-tag">Remoto</span>
+                </div>
+            </div>
+        </button>
+
+        <!-- 03 · STREAMING -->
+        <button class="pf-item" data-cat="Streaming" data-year="2026"
+            data-title="Streaming — HPE Tour Peru"
+            data-desc="Producción de streaming en vivo, switcher, México, Colombia, Brasil."
+            data-tags="Streaming,Multi-cámara,Live,Gráficos">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <video class="active"
+                           src="assets/netsoft2026.webm"
+                           poster="assets/aud-net.webp"
+                           muted loop playsinline preload="metadata"></video>
+                
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Streaming</span>
+                    <span class="pf-item-year">2026</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+                <div class="pf-item-dots"></div>
+            </div>
+            <div class="pf-item-content">
+                <h3>Streaming — HPE Tour Peru</h3>
+                <p>Streaming para México, Colombia y Brasil.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Live</span>
+                    <span class="pf-item-tag">Remoto</span>
+                </div>
+            </div>
+        </button>
+
+        <!-- 03 · MAPPING -->
+        <button class="pf-item" data-cat="Mapping" data-year="2026"
+            data-title="Video mapping"
+            data-desc="Producción de video mapping para casa en coyoacan cdmx: conceptualización, animación 3D, calibración y proyección en vivo."
+            data-tags="Mapping,Fachada,Proyección,3D">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <video class="active"
+                           src="assets/mappings.webm"
+                           poster="assets/aud-mapp.webp"
+                           muted loop playsinline preload="metadata"></video>
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Mapping</span>
+                    <span class="pf-item-year">2026</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+                <div class="pf-item-dots"></div>
+            </div>
+            <div class="pf-item-content">
+                <h3>Video mapping</h3>
+                <p>Proyección sobre fachada, animación 3D.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Mapping</span>
+                    <span class="pf-item-tag">Proyección</span>
+                </div>
+            </div>
+        </button>
+
+    </div>
+</section>
+
+    <!-- 05 IA -->
+    <section class="pf-view" data-view="ia">
+        <div class="pf-view-header">
+            <div class="pf-view-num">05 / Inteligencia artificial</div>
+            <h2 class="pf-view-title">IA como palanca,<br>no como atajo.</h2>
+            <p class="pf-view-desc">
+                Implementación de IA en flujos creativos y operativos:
+                generación de imagen y video, modelado 3D asistido, sitios web
+                y automatizaciones.
+            </p>
+            <div class="pf-view-tags">
+                <span class="pf-view-tag">Imagen</span>
+                <span class="pf-view-tag">Video</span>
+                <span class="pf-view-tag">3D</span>
+                <span class="pf-view-tag">Web</span>
+                <span class="pf-view-tag">Automatización</span>
+            </div>
+        </div>
+
+        <div class="pf-grid">
+            
+            <!-- ⬇⬇⬇ 01 MÚLTIPLES IMÁGENES + VIDEO ⬇⬇⬇ -->
+            <button class="pf-item" data-cat="IA GENERATIVA DE IMAGENES" data-year="2026"
+                data-title="IA GENERATIVA DE IMAGENES"
+                data-desc="Generacion de imagenes usando diferentes modelos de inteligencia artificial."
+                data-tags="Chat GPT,Gemini,Leonardo IA,Flow,Nano Banana">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/IA-gen-imag1.jpg" alt="IA IMAGENES">
+                        <img class="active" src="assets/IA-gen-imag2.jpg" alt="IA IMAGENES">
+                        <img class="active" src="assets/IA-gen-imag3.jpg" alt="IA IMAGENES">
+                        <img class="active" src="assets/IA-gen-imag4.jpg" alt="IA IMAGENES">
+                        <img class="active" src="assets/IA-gen-imag5.jpg" alt="IA IMAGENES">
+                        <img class="active" src="assets/IA-gen-imag6.jpg" alt="IA IMAGENES">
+                        <img class="active" src="assets/IA-gen-imag7.jpg" alt="IA IMAGENES">
+                        <!-- VIDEO: poster apunta a una IMAGEN real (no al propio .webm) -->
+
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">IA</span>
+                        <span class="pf-item-year">2026</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                    <!-- Los dots se generan dinámicamente por JS (initPfCardSliders) -->
+                    <div class="pf-item-dots"></div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>IA GENERATIVA DE IMAGENES</h3>
+                    <p>Generacion de imagenes usando diferentes herramientas.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">IA</span>
+                        <span class="pf-item-tag">Generacion de Imagenes</span>
+                        <span class="pf-item-tag">Prompt Enginering</span>
+                    </div>
+                </div>
+            </button>
+            <!-- ⬆⬆⬆ FIN MODO MULTIPLE ⬆⬆⬆ -->  
+
+            <!-- ⬇⬇⬇ 02 MÚLTIPLES IMÁGENES + VIDEO ⬇⬇⬇ -->
+            <button class="pf-item" data-cat="IA GENERATIVA PRODUCTO" data-year="2026"
+                data-title="IA GENERATIVA DE PRODUCTO"
+                data-desc="Generacion de imagenes usando diferentes modelos de inteligencia artificial."
+                data-tags="Chat GPT,Gemini,Leonardo IA,Flow,Nano Banana">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/IA-gen-prod1.jpg" alt="IA IMAGENES">
+                        <img class="active" src="assets/IA-gen-prod2.jpg" alt="IA IMAGENES">
+                        <img class="active" src="assets/IA-gen-prod3.jpg" alt="IA IMAGENES">
+                        <img class="active" src="assets/IA-gen-prod4.jpg" alt="IA IMAGENES">
+                        <img class="active" src="assets/IA-gen-prod5.jpg" alt="IA IMAGENES">
+                        <img class="active" src="assets/IA-gen-prod6.jpg" alt="IA IMAGENES">
+                        <img class="active" src="assets/IA-gen-prod7.jpg" alt="IA IMAGENES">
+                        <!-- VIDEO: poster apunta a una IMAGEN real (no al propio .webm) -->
+
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">IA</span>
+                        <span class="pf-item-year">2026</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                    <!-- Los dots se generan dinámicamente por JS (initPfCardSliders) -->
+                    <div class="pf-item-dots"></div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>IA GENERATIVA DE PRODUCTO</h3>
+                    <p>Generacion de imagenes usando diferentes herramientas.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">IA</span>
+                        <span class="pf-item-tag">Generacion de Imagenes</span>
+                        <span class="pf-item-tag">Prompt Enginering</span>
+                    </div>
+                </div>
+            </button>
+            <!-- ⬆⬆⬆ FIN MODO MULTIPLE ⬆⬆⬆ --> 
+                         
+            <!-- ⬇⬇⬇ 03 IA GEN VIDEO ⬇⬇⬇ -->
+            <button class="pf-item" data-cat="IA" data-year="2026"
+                data-title="IA GENERATIVA VIDEO"
+                data-desc="Generacion de video por medio de inteligencia artificial."
+                data-tags="Chat GPT,Gemini,Leonardo IA,Flow,Nano Banana">
+                <div class="pf-item-image">
+                    <div class="pf-item-slides">
+                        <img class="active" src="assets/IA-gen-vid.webp" alt="ia Gen">
+
+                        <!-- VIDEO: poster apunta a una IMAGEN real (no al propio .webm) -->
+                        <video src="assets/IA-gen-vid1.mp4"
+                               poster="assets/vid-1.webp"
+                               muted loop playsinline preload="metadata"></video>
+                        
+                        <video src="assets/IA-gen-vid2.mp4"
+                               poster="assets/vid-2.webp"
+                               muted loop playsinline preload="metadata"></video>       
+
+                        <video src="assets/IA-gen-vid3.mp4"
+                               poster="assets/vid-3.webp"
+                               muted loop playsinline preload="metadata"></video>
+
+                        <video src="assets/IA-gen-vid4.mp4"
+                               poster="assets/vid-4.webp"
+                               muted loop playsinline preload="metadata"></video>
+
+                        <video src="assets/IA-gen-vid5.mp4"
+                               poster="assets/vid-5.webp"
+                               muted loop playsinline preload="metadata"></video>
+                               
+                    </div>
+                    <div class="pf-item-overlay"></div>
+                    <div class="pf-item-meta">
+                        <span class="pf-item-cat">IA</span>
+                        <span class="pf-item-year">2026</span>
+                    </div>
+                    <div class="pf-item-arrow">↗</div>
+                    <!-- Los dots se generan dinámicamente por JS (initPfCardSliders) -->
+                    <div class="pf-item-dots"></div>
+                </div>
+                <div class="pf-item-content">
+                    <h3>IA GENERATIVA VIDEO</h3>
+                    <p>Generacion de video mediante IA.</p>
+                    <div class="pf-item-tags">
+                        <span class="pf-item-tag">IA</span>
+                        <span class="pf-item-tag">Video</span>
+                        <span class="pf-item-tag">4k</span>
+                    </div>
+                </div>
+            </button>
+            <!-- ⬆⬆⬆ FIN MODO MULTIPLE ⬆⬆⬆ -->            
+
+
+    <!-- 06 EVENTOS -->
+    <section class="pf-view" data-view="eventos">
+        <div class="pf-view-header">
+            <div class="pf-view-num">06 / Coordinación de eventos</div>
+            <h2 class="pf-view-title">Experiencias que<br>se recuerdan.</h2>
+            <p class="pf-view-desc">
+                Coordinación integral de eventos corporativos, lanzamientos y experiencias.
+                Desde la conceptualización hasta el desmontaje, con un solo responsable.
+            </p>
+            <div class="pf-view-tags">
+                <span class="pf-view-tag">Congresos</span>
+                <span class="pf-view-tag">Lanzamientos</span>
+                <span class="pf-view-tag">Culturales</span>
+                <span class="pf-view-tag">Inmersivos</span>
+            </div>
+        </div>
+
+        <div class="pf-grid">
+
+        <!-- 01 · EVENTOS -->
+        <button class="pf-item" data-cat="Eventos" data-year="2025"
+            data-title="Coordinación — SOPANOP 2025"
+            data-desc="Producción y coordinación del evento en la ciudad de cancún durante 5 dias."
+            data-tags="Montaje,Producción,Coordinación">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <video class="active"
+                           src="assets/sop2025.webm"
+                           poster="assets/evnt-sop.webp"
+                           muted loop playsinline preload="metadata"></video>
+                
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Producción</span>
+                    <span class="pf-item-year">2025</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+                <div class="pf-item-dots"></div>
+            </div>
+            <div class="pf-item-content">
+                <h3>Coordinación — SOPANOP 2025</h3>
+                <p>Coordinacion de evento y apoyo global.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Evento</span>
+                    <span class="pf-item-tag">Producción</span>
+                </div>
+            </div>
+        </button>
+
+        <!-- 02 · EVENTOS -->
+        <button class="pf-item" data-cat="Eventos" data-year="2026"
+            data-title="Coordinación — Fitch Ratings"
+            data-desc="Producción y coordinación del evento en la ciudad de Monterrey."
+            data-tags="Montaje,Producción,Coordinación">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <video class="active"
+                           src="assets/fitch26.webm"
+                           poster="assets/evnt-fitch.webp"
+                           muted loop playsinline preload="metadata"></video>
+                
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Producción</span>
+                    <span class="pf-item-year">2026</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+                <div class="pf-item-dots"></div>
+            </div>
+            <div class="pf-item-content">
+                <h3>Coordinación — Fitch Ratings</h3>
+                <p>Coordinacion de evento y apoyo global.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Evento</span>
+                    <span class="pf-item-tag">Producción</span>
+                </div>
+            </div>
+        </button>
+
+        <!-- 03 · EVENTOS -->
+        <button class="pf-item" data-cat="Eventos" data-year="2025"
+            data-title="Coordinación — Oktober Fest"
+            data-desc="Producción y coordinación del evento en la ciudad de Monterrey."
+            data-tags="Montaje,Producción,Coordinación">
+            <div class="pf-item-image">
+                <div class="pf-item-slides">
+                    <video class="active"
+                           src="assets/oktoberfest25.webm"
+                           poster="assets/evnt-octob.webp"
+                           muted loop playsinline preload="metadata"></video>
+                
+                </div>
+                <div class="pf-item-overlay"></div>
+                <div class="pf-item-meta">
+                    <span class="pf-item-cat">Producción</span>
+                    <span class="pf-item-year">2025</span>
+                </div>
+                <div class="pf-item-arrow">↗</div>
+                <div class="pf-item-dots"></div>
+            </div>
+            <div class="pf-item-content">
+                <h3>Coordinación — Oktober Fest</h3>
+                <p>Coordinacion de evento y apoyo global.</p>
+                <div class="pf-item-tags">
+                    <span class="pf-item-tag">Evento</span>
+                    <span class="pf-item-tag">Producción</span>
+                </div>
+            </div>
+        </button>
+
+        </div>
+    </section>
+
+</div>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <span>© 2026 Erick Castañeda</span>
+        <span>Creative Designer / AI Enginering/ Vibe Coder</span>
+    </div>
+</footer>
+
+<!-- =========================
+     MODAL (con galería de imagen + video)
+========================= -->
+<div class="pf-modal" id="pfModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="pf-modal-backdrop" data-close></div>
+    <div class="pf-modal-content">
+        <button class="pf-modal-close" data-close aria-label="Cerrar">✕</button>
+
+        <div class="pf-modal-image">
+            <img id="pfModalImg" src="" alt="">
+            <!-- ⬇ Video del modal: lo controla script.js (showVideo / stopVideo) -->
+            <video id="pfModalVideo" muted loop playsinline></video>
+
+            <button class="pf-modal-nav prev" id="pfModalPrev" aria-label="Imagen anterior">‹</button>
+            <button class="pf-modal-nav next" id="pfModalNext" aria-label="Imagen siguiente">›</button>
+            <div class="pf-modal-counter" id="pfModalCounter"></div>
+            <div class="pf-modal-thumbs" id="pfModalThumbs"></div>
+        </div>
+
+        <div class="pf-modal-info">
+            <div class="pf-modal-cat" id="pfModalCat"></div>
+            <h3 id="pfModalTitle"></h3>
+            <p id="pfModalDesc"></p>
+            <div class="pf-modal-tags" id="pfModalTags"></div>
+
+            <!-- ⬇ BOTÓN "VER SITIO EN VIVO" (solo se muestra si la card tiene data-live) -->
+            <a class="pf-modal-cta" id="pfModalLive" href="#" target="_blank" rel="noopener noreferrer" style="display:none;">
+                Ver en vivo <span aria-hidden="true">↗</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+<a class="whatsapp-float"
+   href="https://wa.me/5215516003694?text=Hola%20Erick%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20sobre%20un%20proyecto"
+   target="_blank" rel="noopener noreferrer"
+   aria-label="Escríbeme por WhatsApp">
+    <span class="whatsapp-label">¿Hablamos? Escríbeme</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
